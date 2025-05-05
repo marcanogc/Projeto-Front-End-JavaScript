@@ -1,0 +1,347 @@
+/* Reset básico para todos os elementos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos gerais do body */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #333;
+  background-color: #f4f4f4;
+  line-height: 1.6;
+}
+
+/* Seções principais */
+section {
+  margin-right: 320px; /* Ajuste para sidebar */
+  transition: margin 0.3s;
+}
+
+/* Cabeçalho principal */
+.cabecalho {
+  background: #222;
+  color: #fff;
+  padding: 1.25em 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 2;
+  width: 100vw;
+}
+
+.cabecalho__menu {
+  display: flex;
+  list-style: none;
+  gap: 1.25em;
+}
+
+.cabecalho__link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: opacity 0.2s;
+}
+
+.cabecalho__link:hover {
+  opacity: 0.8;
+}
+
+/* Seção de apresentação */
+.perfil {
+  background: #e0e0e0;
+  display: flex;
+  align-items: center;
+  padding: 8em 2em 2em 2em;
+  gap: 2em;
+}
+
+.perfil__foto img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Seções com fundo claro */
+.formacao,
+.projetos {
+  padding: 2em;
+  background: #eee;
+}
+
+/* Listas de conteúdo */
+.formacao__lista,
+.experiencia__lista {
+  margin-top: 1em;
+}
+
+.formacao__item,
+.experiencia__item {
+  margin-bottom: 1em;
+  padding: 0.5em;
+  background: rgba(255,255,255,0.1);
+  border-radius: 4px;
+}
+
+/* Seções escuras */
+.experiencia--escura,
+.contato--escura {
+  background: #333;
+  color: #fff;
+  padding: 2em;
+}
+
+/* Projetos */
+.projetos__lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5em;
+  margin-top: 1em;
+}
+
+.projetos__card {
+  background: white;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+  transition: transform 0.2s, box-shadow 0.2s;
+  padding: 1.5em;
+  text-align: center;
+}
+
+.projetos__card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.projetos__imagem {
+  height: 180px;
+  background: #e1e4e8;
+  border-radius: 4px;
+  margin-bottom: 1em;
+}
+
+.projetos__botao {
+  background: #f6f8fa;
+  border: 1px solid #e1e4e8;
+  color: #0366d6;
+  transition: all 0.2s;
+  border-radius: 4px;
+  padding: 0.5em 1em;
+  margin: 0.25em;
+  cursor: pointer;
+}
+
+.projetos__botao:hover {
+  background: #0366d6;
+  color: white;
+  border-color: #0366d6;
+}
+
+/* Sidebar GitHub */
+.github-projetos {
+  position: fixed;
+  right: 0;
+  top: 10%;
+  width: 300px;
+  height: 100vh;
+  background: #fff;
+  padding: 0.75em;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+  overflow-y: auto;
+  z-index: 1;
+}
+
+.github-projetos h2 {
+  font-size: 1.25em;
+  color: #24292e;
+  border-bottom: 1px solid #e1e4e8;
+  padding-bottom: 0.5em;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.github-projetos ul {
+  list-style: none;
+  padding: 0;
+}
+
+.github-projetos li {
+  padding: 1em;
+  margin-bottom: 1em;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.github-projetos li:hover {
+  background: #f6f8fa;
+}
+
+.github-projetos strong {
+  display: block;
+  color: #0366d6;
+  font-size: 0.9em;
+}
+
+.github-projetos p {
+  color: #586069;
+  font-size: 0.8em;
+  margin: 0.5em 0;
+}
+
+.github-projetos a {
+  color: #0366d6;
+  text-decoration: none;
+  font-size: 0.8em;
+  display: inline-block;
+  margin-top: 0.5em;
+}
+
+.github-projetos a:hover {
+  text-decoration: underline;
+}
+
+/* Contato */
+.contato__conteudo {
+  display: flex;
+  justify-content: flex-start;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  min-width: 300px;
+  flex: 1;
+}
+
+.formulario__input {
+  padding: 0.75em;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.formulario__mensagem {
+  height: 150px;
+  padding: 0.75em;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: 'Segoe UI';
+  resize: none;
+}
+
+.formulario__botao {
+  background: #0366d6;
+  color: white;
+  padding: 0.75em 1.5em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.formulario__botao:hover {
+  background: #0356b6;
+}
+
+.contato__redes a,
+.contato__redes a:link,
+.contato__redes a:visited,
+.contato__redes a:active {
+  display: inline-block;
+  margin-right: 1em;
+  padding: 0.5em;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  text-decoration: none;
+  color: #fff;
+}
+
+.contato__redes a:hover {
+  opacity: 0.8;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  section {
+    margin-right: 0 !important;
+  }
+
+  .github-projetos {
+    position: static;
+    width: 100%;
+    height: auto;
+    box-shadow: none;
+    margin-top: 2em;
+  }
+
+  .cabecalho {
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  .cabecalho__menu {
+    width: 90vw;
+    flex-direction: column;
+    gap: 0.5em;
+    margin-top: 1em;
+  }
+
+  .cabecalho__item {
+    width: 100%;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .cabecalho__link {
+    display: block;
+    width: 100%;
+    padding: 0.8em;
+    text-align: center;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    /* Manteniendo el estilo original */
+    font-weight: bold;
+    color: #fff;
+    background: rgba(255,255,255,0.05);
+  }
+
+  .cabecalho__link:hover {
+    background: rgba(255,255,255,0.1);
+    transform: scale(1.02);
+  }
+
+  .cabecalho__link:active {
+    background: rgba(255,255,255,0.2);
+  }
+}
+
+  .perfil {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .projetos__lista {
+    grid-template-columns: 1fr;
+  }
+
+  .contato__conteudo {
+    flex-direction: column;
+  }
+
+
+/* Erros */
+.erro {
+  margin-top: 0.25em;
+  display: block;
+  color: #dc3545;
+  font-size: 0.875em;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gabriel Marcano - Portfólio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Cabeçalho com navegação -->
+  <header class="cabecalho cabecalho--mobile">
+    <div class="cabecalho__logo">🟢</div>
+    <nav class="cabecalho__navegacao">
+      <ul class="cabecalho__menu">
+        <!-- Links do menu para cada seção da página -->
+        <li class="cabecalho__item"><a href="#apresentacao" class="cabecalho__link">Apresentação</a></li>
+        <li class="cabecalho__item"><a href="#formacao" class="cabecalho__link">Formação</a></li>
+        <li class="cabecalho__item"><a href="#experiencia" class="cabecalho__link">Experiência</a></li>
+        <li class="cabecalho__item"><a href="#projetos" class="cabecalho__link">Projetos</a></li>
+        <li class="cabecalho__item"><a href="#contato" class="cabecalho__link">Fale comigo</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Seção de apresentação pessoal -->
+  <section id="apresentacao" class="perfil">
+    <div class="perfil__foto"><img src="./img/perfil.png" alt="Foto de perfil"></div>
+    <div class="perfil__texto">
+      <h1>Gabriel Marcano</h1>
+      <h2>Full-Stack Developer</h2>
+      <h3>Olá! Eu sou Gabriel.</h3>
+      <p>Engenheiro de Sistemas com foco em Desenvolvimento Web.</p>
+    </div>
+  </section>
+
+  <!-- Seção de formação acadêmica -->
+  <section id="formacao" class="formacao">
+    <h2 class="formacao__titulo">Formação</h2>
+    <ul class="formacao__lista">
+      <li class="formacao__item"><strong>2025</strong> Formação Full Stack - Toti Diversidade</li>
+      <li class="formacao__item"><strong>2010</strong> Graduação em Engenheiro de Sistemas - Venezuela</li>
+    </ul>
+  </section>
+
+  <!-- Seção de experiência profissional -->
+  <section id="experiencia" class="experiencia experiencia--escura">
+    <h2 class="experiencia__titulo">Experiência</h2>
+    <ul class="experiencia__lista">
+      <li class="experiencia__item"><strong>2024-2025</strong> Marcopolo – Almoxarife</li>
+      <li class="experiencia__item"><strong>2013-2021</strong> Pdvsa – Analista de Planejamento</li>
+    </ul>
+  </section>
+
+  <!-- Seção de projetos desenvolvidos -->
+  <section id="projetos" class="projetos">
+    <h2 class="projetos__titulo">Projetos</h2>
+    <div class="projetos__lista">
+      <!-- Cartões de projetos -->
+      <div class="projetos__card">
+        <div class="projetos__imagem"></div>
+        <h3 class="projetos__nome">Título do Projeto</h3>
+        <p class="projetos__descricao">Descrição curta do projeto.</p>
+        <button class="projetos__botao">Repositório</button>
+        <button class="projetos__botao">Ver demo</button>
+      </div>
+      <div class="projetos__card">
+        <div class="projetos__imagem"></div>
+        <h3 class="projetos__nome">Título do Projeto</h3>
+        <p class="projetos__descricao">Descrição curta do projeto.</p>
+        <button class="projetos__botao">Repositório</button>
+        <button class="projetos__botao">Ver demo</button>
+      </div>
+      <div class="projetos__card">
+        <div class="projetos__imagem"></div>
+        <h3 class="projetos__nome">Título do Projeto</h3>
+        <p class="projetos__descricao">Descrição curta do projeto.</p>
+        <button class="projetos__botao">Repositório</button>
+        <button class="projetos__botao">Ver demo</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção de contato com formulário -->
+  <section id="contato" class="contato contato--escura">
+    <h2 class="contato__titulo">Contato</h2>
+    <div class="contato__conteudo">
+      <div class="contato__texto">
+        <p>Quer entrar em contato comigo?</p>
+        <p>Preencha o formulário ao lado e entrarei em contato o mais rápido possível.</p>
+        <p>Você também pode me encontrar nas seguintes redes sociais:</p>
+        <div class="contato__redes">
+            <a href="https://www.linkedin.com/in/gabriel-marcano" target="_blank">🔗 LinkedIn</a>
+            <a href="https://tree-whale-a25.notion.site/Gabriel-Marcano-16dbf5073b6980e184b3c38716fbaa5e" target="_blank">👨‍💻 Notion</a>
+            <a href="https://github.com/marcanogc" target="_blank">💻 GitHub</a>
+            <a href="mailto:marcanogc@gmail.com" target="_blank">📧 Email</a>
+        </div>
+      </div>
+
+      <!-- Formulário de contato -->
+      <form class="formulario">
+        <input type="text" class="formulario__input" placeholder="Nome" required>
+        <input type="email" class="formulario__input" placeholder="E-mail" required>
+        <input type="text" class="formulario__input" placeholder="Assunto">
+        <textarea class="formulario__mensagem" placeholder="Mensagem" required></textarea>
+        <button type="submit" class="formulario__botao">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+<script src="./js/scripts.js"></script>
+</body>
+</html>
